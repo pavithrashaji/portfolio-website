@@ -2,28 +2,22 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div>
-      <h1 className="flex flex-col items-center justify-center h-screen bg-gray-100">
-        Welcome to My Next.js App!
-        <Link href="/user/jack">
-          <button className="border-2 border-black rounded-lg shadow-md p-2 m-4 hover:border-red-600 hover:bg-red-300">
-            User Profile
-          </button>
+    <div className='flex items-start justify-center'>
+      <nav className="nav-gradient text-custom-mid flex flex-row self-center items-center justify-around w-4/5 bg-custom-nav-bg rounded-2xl m-8 p-3 shadow-md shadow-custom-nav-bg-2">
+        <Link className='border-draw hover:text-white text-2xl' href="/about">
+            ABOUT
         </Link>
-      </h1>
-      <div className="flex flex-row text-pretty justify-between items-center flex-wrap">
-        <div className="flex-1 basis-1/4 bg-green-100">Item 1</div>
-        <div className="flex-1 basis-1/4 bg-red-100">Item 2</div>
-        <div className="flex-1 basis-1/4 bg-blue-100">Item 3</div>
-        <div className="flex-1 basis-1/4 bg-yellow-100">Item 4</div>
-      </div>
-
-      <p className="flex items-center justify-center h-screen bg-gray-100">This is a basic example using the App Router.</p>
-      <Link href="/about">
-        <button>
-          About Page
-        </button>
-      </Link>
+        <Link className='border-draw hover:text-white text-2xl' href="/about">
+          PROJECTS
+        </Link>
+        <Link className='border-draw hover:text-white text-2xl' href="/about">
+          EXPERIENCE
+        </Link>
+        <Link className='border-draw hover:text-white text-2xl' href="/about">
+          CONTACT
+        </Link>
+      </nav>
     </div>
+    
   );
 }
