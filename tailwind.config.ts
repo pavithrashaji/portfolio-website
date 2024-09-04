@@ -8,12 +8,20 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      borderStyle: {
+        dotted: 'dotted',
+        dashed: 'dashed',
+      },
+      borderImage: {
+        'dotted': 'radial-gradient(circle, transparent 20%, black 20%) 1',
+      },
       colors: {
-        'custom-start': '#E0B1CB',  
-        'custom-mid': '#BE95C4',  
-        'custom-end': '#9F86C0', 
-        'custom-nav-bg': '#514374',
-        'custom-nav-bg-2': '#231942',
+        'custom-start': '#4A3346',  
+        'custom-mid': '#3F1B43',  
+        'custom-end': '#330040', 
+        'custom-nav-bg': '#a88dbc',
+        'custom-nav-bg-2': '#967ba9',
+        'custom-nav-bg-3': '#967ba9',
       },
     },
   },

@@ -19,7 +19,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} moving-gradient`}>{children}</body>
+      <body className={`${inter.className} shooting-stars`}>
+        <div className="moving-gradient">
+        </div>
+        {children}
+      </body>
     </html>
   );
 }
