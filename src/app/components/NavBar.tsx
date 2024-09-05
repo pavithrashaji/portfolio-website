@@ -1,7 +1,12 @@
+"use client";
 import Link from 'next/link';
 import docImage from '@/app/images/pavithra-photo.jpg'
+import { usePathname } from 'next/navigation';
+import React from 'react';
 
 export default function NavBar() {
+    const pathname = usePathname();
+    const isActive = (path: string) => pathname === path;
     return (
         <div>
             <div className='flex flex-col md:flex-row lg:flex-row fixed justify-start w-screen'>
@@ -13,17 +18,20 @@ export default function NavBar() {
                         />
                  </Link>
                 
-                <nav className="nav-gradient left-14 top-32 md:left-44 md:top-20 lg:left-44 lg:top-20  text-custom-mid flex flex-col sm:flex-col md:flex-row lg:flex-row self-center items-center justify-around w-32 h-3/4 md:h-auto lg:h-auto md:w-5/6 lg:w-5/6 bg-custom-nav-bg rounded-2xl mx-3 my-4 md:m-0 lg:m-0 p-2 shadow-md shadow-custom-mid">
-                    <Link className='border-draw hover:text-white focus:text-white text-2xl' href="/about">
+                <nav className="nav-gradient left-14 top-32 md:left-44 md:top-20 lg:left-32 lg:top-20  text-custom-mid flex flex-col sm:flex-col md:flex-row lg:flex-row self-center items-center justify-around w-32 h-3/4 md:h-auto lg:h-auto md:w-5/6 lg:w-5/6 bg-custom-nav-bg rounded-2xl mx-3 my-4 md:m-0 lg:m-0 p-2 shadow-md shadow-custom-mid">
+                    <Link className={`${isActive("/about") ? 'text-white p-1 border-b border-t' : 'text-custom-mid border-draw'} hover:text-white text-2xl`} href="/about">
                         ABOUT
                     </Link>
-                    <Link className='border-draw hover:text-white focus:text-white text-2xl' href="/projects">
+
+                    <Link href="/projects" className={`${isActive("/projects") ? 'text-white p-1 border-b border-t' : 'text-custom-mid border-draw'} hover:text-white after:text-white text-2xl`}>
                     PROJECTS
                     </Link>
-                    <Link className='border-draw hover:text-white focus:text-white text-2xl' href="/experience">
+
+                    <Link className={`${isActive("/experience") ? 'text-white p-1 border-b border-t' : 'text-custom-mid border-draw'} hover:text-white text-2xl`} href="/experience">
                     EXPERIENCE
                     </Link>
-                    <Link className='border-draw hover:text-white focus:text-white text-2xl' href="/contact">
+
+                    <Link className={`${isActive("/contact") ? 'text-white p-1 border-b border-t' : 'text-custom-mid border-draw'} hover:text-white text-2xl`} href="/contact">
                     CONTACT
                     </Link>
                 </nav>

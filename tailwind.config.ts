@@ -12,9 +12,6 @@ const config: Config = {
         dotted: 'dotted',
         dashed: 'dashed',
       },
-      borderImage: {
-        'dotted': 'radial-gradient(circle, transparent 20%, black 20%) 1',
-      },
       colors: {
         'custom-start': '#4A3346',  
         'custom-mid': '#3F1B43',  
