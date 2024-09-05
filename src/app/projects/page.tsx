@@ -16,6 +16,7 @@ export default function Projects() {
     images: string[],
     name: string;
     description: string;
+    readmeContent: string;
   }
 
   const [repos, setRepos] = useState<Repo[]>([]);
@@ -30,32 +31,8 @@ export default function Projects() {
         console.error('Failed to fetch repos:', error);
       }
     }
-
     fetchRepos();
   }, []);
-
-  // const projects = [
-  //   {
-  //     images: [image1.src, image2.src],
-  //     title: 'Volunteering Application with Integrated SDG Classification',
-  //     description: 'Flutter-based iOS application for a volunteering platform, designed to connect interested volunteers to non-profit organisations. Integrated with Sustainability Development Goal (SDG) Classification for volunteer opportunities based on SDGs defined by the UN.',
-  //   },
-  //   {
-  //     images: [image3.src, image4.src],
-  //     title: 'Project 2',
-  //     description: 'Description of Project 2.',
-  //   },
-  //   {
-  //     images: [image3.src, image4.src],
-  //     title: 'Volunteering Application with Integrated SDG Classification',
-  //     description: 'Flutter-based iOS application for a volunteering platform, designed to connect interested volunteers to non-profit organisations. Integrated with Sustainability Development Goal (SDG) Classification for volunteer opportunities based on SDGs defined by the UN.',
-  //   },
-  //   {
-  //     images: [image1.src, image2.src],
-  //     title: 'Project 2',
-  //     description: 'Detailed description of Project 2.',
-  //   },
-  // ];
 
     const scrollContainerBy = (amount: number) => {
         if (scrollContainerRef.current) {
