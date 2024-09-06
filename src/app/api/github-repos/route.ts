@@ -10,7 +10,6 @@ const fetchReadmeContent = async (repoName: string): Promise<string> => {
       }
       );
       const data = await response.json();
-      console.log('README data:', data); 
       if (data.message === 'Not Found') return 'Project';
       const readmeContent = atob(data.content); 
       return readmeContent.split('\n')[0]; 

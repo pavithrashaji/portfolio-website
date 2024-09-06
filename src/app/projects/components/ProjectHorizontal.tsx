@@ -32,8 +32,8 @@ const ProjectHorizontal : React.FC<HorizontalCarouselProps> = ({images, title, d
                     <div key={index} className="flex flex-row flex-shrink-0 h-96">
                         <img src={img} alt={`Slide ${index}`} className="w-96 h-full object-cover rounded-xl shadow-outside shadow-custom-end" />
                         <div className="flex flex-col items-center justify-items-evenly ml-4 mr-4 w-[600px]">
-                            <h2 className="text-3xl font-bold text-white mt-2">{title}</h2>
-                            <p className="mt-2 mb-4 text-lg text-center text-custom-nav-bg">{description}</p>
+                            <h2 className="text-3xl font-bold text-center text-white mt-2">{title}</h2>
+                            <p className="mt-2 mb-4 text-lg text-custom-nav-bg">{description}</p>
                             <h2 className="mt-8 text-2xl font-bold text-white">TECH STACK</h2>
                             <div className="mt-5 flex flex-row justify-evenly">
                             <figure>
@@ -71,12 +71,12 @@ const ProjectHorizontal : React.FC<HorizontalCarouselProps> = ({images, title, d
                 <button onClick={nextSlide} className="fixed right-[75px] bottom-[160px] transform -translate-y-1/2 p-2 nav-gradient rounded-lg text-white">
                     <ChevronRight />
                 </button>
-                <button onClick={() => scrollContainerBy(570)} className="flex flex-row justify-center absolute top-[420px] left-[106px] p-2 w-5/6 border-white nav-gradient rounded-lg text-xl text-white">
-                    <ChevronDown />
+                <button onClick={() => scrollContainerBy(570)} className="flex flex-row justify-center absolute top-[420px] left-[106px] p-2 w-5/6 border-white scroll-button rounded-lg text-xl text-white">
+                    <ChevronDown className="size-10"/>
                 </button>
 
-                <button onClick={() => scrollContainerBy(-570)} className="flex flex-row justify-center absolute bottom-[420px] left-[106px] p-2  w-5/6 border-white nav-gradient rounded-lg text-xl text-white ">
-                    <ChevronUp />
+                <button onClick={() => scrollContainerBy(-570)} className="flex flex-row justify-center absolute bottom-[420px] left-[106px] p-2  w-5/6 border-white scroll-button rounded-lg text-xl text-white ">
+                    <ChevronUp className="size-10"/>
                 </button>
 
         </div>
